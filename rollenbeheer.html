@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rolbeheer</title>
+    <style>
+        /* Basisstijl voor een nette opmaak */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2, h3, h4 {
+            margin-top: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Rolbeheer</h2>
+    <p>
+        <label for="roleFor">Rol is voor:</label>
+        <select id="roleFor" name="roleFor" multiple>
+            <option value="praktijk">Praktijk</option>
+            <option value="locatie">Locatie</option>
+        </select>
+    </p>
+
+    <!-- Eigen organisatie Sectie -->
+    <h3>Eigen organisatie</h3>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="eigen_organisatie"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="eigen_organisatie"></th>
+        </tr>
+        <tr>
+            <td>Stamgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>Contactgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>Start- en einddatum</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>Bankgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>Organisatierollen</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>Onderliggende organisaties toevoegen/verwijderen</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_organisatie"></td>
+        </tr>
+    </table>
+
+    <!-- Onderliggende organisaties Sectie -->
+    <h3>Onderliggende organisaties</h3>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="onderliggende_organisaties"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="onderliggende_organisaties"></th>
+        </tr>
+        <tr>
+            <td>Stamgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>Contactgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>Start- en einddatum</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>Bankgegevens</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>Organisatierollen</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>Onderliggende organisaties toevoegen/verwijderen</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+        </tr>
+    </table>
+
+    <!-- Rollen Sectie -->
+    <h3>Rollen</h3>
+
+    <!-- Eigen gebruiker Sectie -->
+    <h4>Eigen gebruiker</h4>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="eigen_gebruiker"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="eigen_gebruiker"></th>
+        </tr>
+        <tr>
+            <td>blok 1</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_gebruiker"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_gebruiker"></td>
+        </tr>
+        <tr>
+            <td>blok 2</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="eigen_gebruiker"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="eigen_gebruiker"></td>
+        </tr>
+    </table>
+
+    <!-- Gebruikers eigen organisatie Sectie -->
+    <h4>Gebruikers eigen organisatie</h4>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="gebruikers_eigen_organisatie"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="gebruikers_eigen_organisatie"></th>
+        </tr>
+        <tr>
+            <td>blok 1</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_eigen_organisatie"></td>
+        </tr>
+        <tr>
+            <td>blok 2</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_eigen_organisatie"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_eigen_organisatie"></td>
+        </tr>
+    </table>
+
+    <!-- Gebruikers Onderliggende organisaties Sectie -->
+    <h4>Gebruikers Onderliggende organisaties</h4>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="gebruikers_onderliggende_organisaties"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="gebruikers_onderliggende_organisaties"></th>
+        </tr>
+        <tr>
+            <td>blok 1</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+        </tr>
+        <tr>
+            <td>blok 2</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+        </tr>
+    </table>
+
+    <!-- JavaScript voor "Alles Inzien/Bewerken" functionaliteit -->
+    <script>
+        // Functie om alle checkboxes binnen een sectie aan of uit te zetten
+        function toggleSectionCheckboxes(section, checkboxClass, isChecked) {
+            const checkboxes = document.querySelectorAll(`input.${checkboxClass}[data-section="${section}"]`);
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = isChecked;
+            });
+        }
+
+        // Luisteren naar "Alles Inzien" en "Alles Bewerken" checkboxes voor elke sectie
+        const inzienAllCheckboxes = document.querySelectorAll('input.inzien_all');
+        inzienAllCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const section = this.getAttribute('data-section');
+                toggleSectionCheckboxes(section, 'inzien_checkbox', this.checked);
+            });
+        });
+
+        const bewerkenAllCheckboxes = document.querySelectorAll('input.bewerken_all');
+        bewerkenAllCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const section = this.getAttribute('data-section');
+                toggleSectionCheckboxes(section, 'bewerken_checkbox', this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
+
