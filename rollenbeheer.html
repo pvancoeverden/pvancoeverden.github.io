@@ -7,7 +7,8 @@
         body {
             font-family: Arial, sans-serif;
         }
-        h2, h3, h4 {
+
+        h2, h3, h3 {
             margin-top: 30px;
         }
         table {
@@ -22,11 +23,14 @@
         }
         label {
             margin-right: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <h2>Rolbeheer</h2>
+    <label>Naam:</label> <input type="text" name="name" id="name"/><br/><br/>
+    <label>Eigenaar</label> Applicatiebreed
     <p>
         <label for="roleFor">Rol is voor:</label>
         <select id="roleFor" name="roleFor" multiple>
@@ -117,9 +121,21 @@
 
     <!-- Rollen Sectie -->
     <h3>Rollen</h3>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="rollen"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="rollen"></th>
+        </tr>
+        <tr>
+            <td>blok 1</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="rollen"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="rollen"></td>
+        </tr>
+    </table>
 
     <!-- Eigen gebruiker Sectie -->
-    <h4>Eigen gebruiker</h4>
+    <h3>Eigen gebruiker</h3>
     <table>
         <tr>
             <th>Item</th>
@@ -139,7 +155,7 @@
     </table>
 
     <!-- Gebruikers eigen organisatie Sectie -->
-    <h4>Gebruikers eigen organisatie</h4>
+    <h3>Gebruikers eigen organisatie</h3>
     <table>
         <tr>
             <th>Item</th>
@@ -159,7 +175,7 @@
     </table>
 
     <!-- Gebruikers Onderliggende organisaties Sectie -->
-    <h4>Gebruikers Onderliggende organisaties</h4>
+    <h3>Gebruikers Onderliggende organisaties</h3>
     <table>
         <tr>
             <th>Item</th>
