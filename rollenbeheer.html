@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Rolbeheer</title>
     <style>
@@ -32,12 +32,14 @@
     <label>Naam:</label> <input type="text" name="name" id="name"/><br/><br/>
     <label>Eigenaar</label> Applicatiebreed
     <p>
-        <label for="roleFor">Rol is voor:</label>
-        <select id="roleFor" name="roleFor" multiple>
+        <label for="roleFor">Niveau</label>
+        <select id="roleFor" name="roleFor">
+            <option value="applicatiebreed">Applicatiebreed</option>
             <option value="praktijk">Praktijk</option>
-            <option value="locatie">Locatie</option>
+            <option value="regioorganisatie">Regio-organisatie</option>
         </select>
     </p>
+    <label>Rol beperkt uitdeelbaar</label><input type="checkbox"/>
 
     <!-- Eigen organisatie Sectie -->
     <h3>Eigen organisatie</h3>
@@ -79,60 +81,90 @@
         </tr>
     </table>
 
+    <section id="regioorganisatie-organisatie" class="regioorganisatie">
+        <!-- Onderliggende organisaties Sectie -->
+        <h3>Regio-organisatie</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Inzien <input type="checkbox" class="inzien_all" data-section="regioorganisatie"></th>
+                <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="regioorganisatie"></th>
+            </tr>
+            <tr>
+                <td>Stamgegevens</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>Contactgegevens</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>Start- en einddatum</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>Bankgegevens</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>Organisatierollen</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>Toevoegen</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="regioorganisatie"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="praktijk-organisatie" class="praktijk">
     <!-- Onderliggende organisaties Sectie -->
-    <h3>Onderliggende organisaties</h3>
+        <h3>Praktijken</h3>
     <table>
         <tr>
             <th>Item</th>
-            <th>Inzien <input type="checkbox" class="inzien_all" data-section="onderliggende_organisaties"></th>
-            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="onderliggende_organisaties"></th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="praktijk"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="praktijk"></th>
         </tr>
         <tr>
             <td>Stamgegevens</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
         <tr>
             <td>Contactgegevens</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
         <tr>
             <td>Start- en einddatum</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
         <tr>
             <td>Bankgegevens</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
         <tr>
             <td>Organisatierollen</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
         <tr>
-            <td>Onderliggende organisaties toevoegen/verwijderen</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="onderliggende_organisaties"></td>
+            <td>Toevoegen</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="praktijk"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="praktijk"></td>
         </tr>
     </table>
+    </section>
 
-    <!-- Rollen Sectie -->
-    <h3>Rollen</h3>
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Inzien <input type="checkbox" class="inzien_all" data-section="rollen"></th>
-            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="rollen"></th>
-        </tr>
-        <tr>
-            <td>blok 1</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="rollen"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="rollen"></td>
-        </tr>
-    </table>
 
     <!-- Eigen gebruiker Sectie -->
     <h3>Eigen gebruiker</h3>
@@ -174,25 +206,123 @@
         </tr>
     </table>
 
-    <!-- Gebruikers Onderliggende organisaties Sectie -->
-    <h3>Gebruikers Onderliggende organisaties</h3>
+    <section id="gebruikers_regioorganisatie" class="regioorganisatie">
+        <h3>Gebruikers RegioOrganisatie</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Inzien <input type="checkbox" class="inzien_all" data-section="gebruikers_regioorganisatie"></th>
+                <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="gebruikers_regioorganisatie"></th>
+            </tr>
+            <tr>
+                <td>blok 1</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_regioorganisatie"></td>
+            </tr>
+            <tr>
+                <td>blok 2</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_regioorganisatie"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_regioorganisatie"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="gebruikers_praktijk" class="praktijk">
+        <h3>Gebruikers Praktijken</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Inzien <input type="checkbox" class="inzien_all" data-section="gebruikers_praktijk"></th>
+                <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="gebruikers_praktijk"></th>
+            </tr>
+            <tr>
+                <td>blok 1</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_praktijk"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_praktijk"></td>
+            </tr>
+            <tr>
+                <td>blok 2</td>
+                <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_praktijk"></td>
+                <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_praktijk"></td>
+            </tr>
+        </table>
+    </section>
+
+
+    <h3>Applicatie Viplive</h3>
     <table>
         <tr>
-            <th>Item</th>
-            <th>Inzien <input type="checkbox" class="inzien_all" data-section="gebruikers_onderliggende_organisaties"></th>
-            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="gebruikers_onderliggende_organisaties"></th>
+            <th></th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="viplive"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="viplive"></th>
+        </tr>
+
+        <tr>
+            <td>Rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="viplive"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="viplive"></td>
         </tr>
         <tr>
-            <td>blok 1</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+            <td>Beperkte rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="viplive"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="viplive"></td>
         </tr>
         <tr>
-            <td>blok 2</td>
-            <td><input type="checkbox" class="inzien_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
-            <td><input type="checkbox" class="bewerken_checkbox" data-section="gebruikers_onderliggende_organisaties"></td>
+            <td>Applicatiespecifieke velden (bijv modules)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="viplive"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="viplive"></td>
         </tr>
     </table>
+
+    <h3>Applicatie Labonline</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="labonline"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="labonline"></th>
+        </tr>
+        <tr>
+            <td>Rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="labonline"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="labonline"></td>
+        </tr>
+        <tr>
+            <td>Beperkte rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="viplive"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="viplive"></td>
+        </tr>
+        <tr>
+            <td>Applicatiespecifieke velden (bijv modules)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="labonline"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="labonline"></td>
+        </tr>
+    </table>
+
+
+    <h3>Applicatie Self Service Beheer</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>Inzien <input type="checkbox" class="inzien_all" data-section="ssb"></th>
+            <th>Bewerken <input type="checkbox" class="bewerken_all" data-section="ssb"></th>
+        </tr>
+        <tr>
+            <td>Rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="ssb"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="ssb"></td>
+        </tr>
+        <tr>
+            <td>Beperkte rollen uitdelen(vereist medewerker inzien)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="ssb"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="ssb"></td>
+        </tr>
+        <tr>
+            <td>Applicatiespecifieke velden (bijv modules)</td>
+            <td><input type="checkbox" class="inzien_checkbox" data-section="ssb"></td>
+            <td><input type="checkbox" class="bewerken_checkbox" data-section="ssb"></td>
+        </tr>
+    </table>
+
 
     <!-- JavaScript voor "Alles Inzien/Bewerken" functionaliteit -->
     <script>
@@ -203,6 +333,29 @@
                 checkbox.checked = isChecked;
             });
         }
+
+        function onRolForChanged() {
+            const rolForSelect = document.getElementById('roleFor');
+            const rolFor = rolForSelect.options[rolForSelect.selectedIndex].value;
+            if (rolFor === 'applicatiebreed') {
+                document.getElementById('praktijk-organisatie').style.display = 'block';
+                document.getElementById('gebruikers_praktijk').style.display = 'block';
+                document.getElementById('regioorganisatie-organisatie').style.display = 'block';
+                document.getElementById('gebruikers_regioorganisatie').style.display = 'block';
+            } else if (rolFor === 'regioorganisatie') {
+                document.getElementById('praktijk-organisatie').style.display = 'block';
+                document.getElementById('gebruikers_praktijk').style.display = 'block';
+                document.getElementById('regioorganisatie-organisatie').style.display = 'none';
+                document.getElementById('gebruikers_regioorganisatie').style.display = 'none';
+            } else {
+                document.getElementById('praktijk-organisatie').style.display = 'none';
+                document.getElementById('gebruikers_praktijk').style.display = 'none';
+                document.getElementById('regioorganisatie-organisatie').style.display = 'none';
+                document.getElementById('gebruikers_regioorganisatie').style.display = 'none';
+            }
+        }
+
+        document.getElementById('roleFor').addEventListener('change', onRolForChanged);
 
         // Luisteren naar "Alles Inzien" en "Alles Bewerken" checkboxes voor elke sectie
         const inzienAllCheckboxes = document.querySelectorAll('input.inzien_all');
